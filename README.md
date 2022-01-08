@@ -64,11 +64,11 @@ Some information can be printed to the serial port if `toggleDebug()' is called.
 
 
 ## To do
-[ ] Make `longPressStart` work with `held`.
-[ ] Add interval optional argument to `assignLongPressStart`.
-[ ] Support boards that don't have the _ns flavor of `time.monotonic()`.
-[ ] Support callback functions with arguments
-[ ] Make a proper state machine
-[ ] Double and multi click
-[ ] Debug output for gap between desired and actual timing
-[ ] Add an example
+- [ ] Make `longPressStart` work with `held`.
+- [ ] Add interval optional argument to `assignLongPressStart`.
+- [ ] Support boards that don't have the _ns flavor of `time.monotonic()`.
+- [ ] Support callback functions with arguments
+- [ ] Make a proper state machine
+- [ ] Double and multi click
+- [ ] Debug output for gap between desired and actual timing
+- [ ] Add an example
