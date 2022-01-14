@@ -24,7 +24,16 @@ def boop():
 
 myButton.assignClick(boop)
 ```
-Currently only supports callback functions with no arguments.
+The method above works for callback functions that require no arguments; use `lambda` for a callback that does require them: `lambda : yourFunction("your","args")`.
+
+```python
+def boop(word):
+    print(word + " " + "boop")
+
+myButton.assignClick(lambda: boop("beep"))
+
+#should print "beep boop"
+```
 
 ### Add `tick()` in your main loop
 ```python
@@ -67,7 +76,7 @@ Some information can be printed to the serial port if `toggleDebug()' is called.
 [ ] Make `longPressStart` work with `held`.
 [ ] Add interval optional argument to `assignLongPressStart`.
 [ ] Support boards that don't have the _ns flavor of `time.monotonic()`.
-[ ] Support callback functions with arguments
+[x] Support callback functions with arguments
 [ ] Make a proper state machine
 [ ] Double and multi click
 [ ] Debug output for gap between desired and actual timing
