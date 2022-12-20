@@ -66,7 +66,8 @@ There are a few properties that can be read from each button instance:
 | ------------------------ | ------------------------------------------------------ |
 | `.isHeld` Boolean        | True when the button is held and a function is assigned to that event.|
 | `.heldDuration` Float     | Number of milliseconds a button has been held for, only while the button is held and a function is assigned to that event. |
-| `.gpioState` Boolean      | Gives the state of the pin directly. |
+| `.gpioState` Boolean      | Gives the raw state of the pin directly, not debounced. |
+| `.buttonActive` Boolean      | True when the button is pressed, after debouncing but not necessarily during a long press. |
 
 ## Debugging
 Some information can be printed to the serial port if `toggleDebug()' is called.  Use this to dial in timing thresholds.

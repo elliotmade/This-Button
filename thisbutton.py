@@ -180,7 +180,18 @@ class thisButton:
 
     @property
     def gpio_state(self):
+        #this is deprecated, should remove it.  replaced with gpioState
         return self.pin.value
+
+    @property
+    def gpioState(self):
+        #return the raw value of the pin
+        return self.pin.value
+
+    @property
+    def buttonActive(self):
+        #returns true while the button is currently pressed after debouncing, not necessarily during a long press
+        return self.active
 
 
 
